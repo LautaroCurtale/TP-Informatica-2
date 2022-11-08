@@ -38,7 +38,7 @@ parametros_t f_inicio (void){
 
 estados_t f_puentecerrado (parametros_t datos){
     datos.puente=0; //cierra el puente
-    datos.alarma=0; //apaga la señal de alerta
+    datos.alarma=0; //apaga la seÃ±al de alerta
     datos.auto_entra=emulacionauto1(); //medicion de ingreso de autos
     datos.auto_sale=emulacionauto2(); //medicion de egreso de autos
     datos.barco_entra=emulacionbarco1(); //medicion de ingreso de barcos
@@ -77,7 +77,7 @@ estados_t f_cerrando (parametros_t datos){
 }
 
 estados_t f_senalalerta (parametros_t datos){
-	datos.alarma=1; //enciende la señal de alerta
+	datos.alarma=1; //enciende la seÃ±al de alerta
     datos.barco_entra=emulacionbarco1(); //medicion de ingreso de barcos
     datos.altura_barco=emulacionbarcoaltura(); //medicion de la altura del barco
     if(altura_maxima<altura_barco&&!barco_entra)
@@ -88,7 +88,7 @@ estados_t f_senalalerta (parametros_t datos){
 
 estados_t f_puenteabierto (parametros_t datos){
     datos.puente=1; //abre el puente
-    datos.alarma=0; //apaga la señal de alerta
+    datos.alarma=0; //apaga la seÃ±al de alerta
     datos.barco_entra=emulacionbarco1(); //medicion de ingreso de barcos
     datos.barco_sale=emulacionbarco2(); //medicion de egreso de barcos
     if(barco_entra>barco_sale)
@@ -147,7 +147,7 @@ unsigned int emulacionauto2 (void){
     return autos;
 }
 
-// Misma lógica que en el caso de los autos pero esta vez con los barcos
+// Misma lÃ³gica que en el caso de los autos pero esta vez con los barcos
 
 unsigned int emulacionbarco1 (void){
     char s,c;
@@ -170,7 +170,7 @@ unsigned int emulacionbarco1 (void){
     return barcos;
 }
 
-unsigned int emulacionauto2 (void){
+unsigned int emulacionbarco2 (void){
     char d,k;
     int barcos=0, barcoentra, barcosale;
     do{
